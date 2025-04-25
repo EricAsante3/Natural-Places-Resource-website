@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Rag";
+    src: url(../../public/fonts/Rag.woff) format('woff');
+}
+
+@font-face {
+    font-family: "Rag-Regular";
+    src: url(../../public/fonts/Rag-Regular.woff) format('woff');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+
+    box-sizing: border-box;
+
+}
+
+#root{
+    min-width: 1126px;
+}
+
+body, html {
+    height: 100%;
+
+    --tw-bg-opacity: 1;
+    background-color: rgb(194 227 255 / var(--tw-bg-opacity, 1)) /* #c2e3ff */;
+
+
+}
+
+
+body {
+    margin: 0;
+    line-height: inherit;
+    min-height: 50rem /* 384px */;
+}
+
+
+.ben {
+
+
+
+    --tw-bg-opacity: 1;
+    background-color: rgb(194 227 255 / var(--tw-bg-opacity, 1)) /* #c2e3ff */;
+    height: 100%;
+
+}
