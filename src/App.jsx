@@ -3,12 +3,21 @@ import React, { useRef,useEffect, useState, useContext } from 'react';
 const images = [
   '/images/pic1.jpeg',
   '/images/pic2.jpg',
+  '/images/pic3.jpeg',
+  '/images/pic4.jpg',
+  '/images/pic5.jpg',
+  '/images/pic6.jpg',
+  '/images/pic7.jpeg',
+  '/images/pic8.png',
+  '/images/pic9.jpg',
+  '/images/pic10.jpg',
+
+
 ];
 
 function app() {
   const [lines, setLines] = useState([]);
-  const [randomFact, setRandomFact] = useState('');
-
+  const [randomFact, setRandomFact] = useState('Generate fact!');
 
   const handleClick = () => {
     if (!lines.length) return;
@@ -18,6 +27,7 @@ function app() {
 
   // Load file once on mount
   useEffect(() => {
+
     fetch('/fun_facts.txt')
       .then(res => res.text())
       .then(text => {
@@ -25,7 +35,6 @@ function app() {
         setLines(parsed);
       });
       
-      handleClick()
   }, []);
 
 
@@ -42,10 +51,10 @@ function app() {
 
   return (
 
-<div className="flex flex-col h-full">
+<div className=" relative flex flex-col h-full">
 
 
-
+  <h1 className='absolute bottom-0 left-5 text-2xl z-50'>Created by Eric Asante - Evst art project</h1>
 
   <div className="flex flex-none flex-row w-full h-11 sm:h-11   relative  bg-slate-50     lg:h-20">
 
@@ -113,7 +122,7 @@ function app() {
     </div>
 
       <div className='flex flex-col w-full h-full p-4 bg-white border-l-2 border-black'>
-        <div className='w-full h-full bg-white'>
+        <div className='w-full h-full flex flex-col bg-white'>
         <div className='bg-white text-center text-2xl pb-4 border-b-4 bold w-full h-1/12 mb-4'>
           Fun Fact!
         </div>
